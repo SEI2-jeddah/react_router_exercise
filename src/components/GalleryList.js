@@ -1,17 +1,17 @@
-import React, {Component} from 'react'
+import React from 'react'
 
 
-class GalleryList extends Component{
-
- render(){
-  console.log(this.props)
+const GalleryList = (props) => {
+ // recieve props magically from the App.js
+ // haha... habibis look at the App.js
+ // I am receiving props from App.js the props is the result of find method
   return (
-   <div>
-    GalleryList
-    <h3>{this.props.match.params.name}</h3>
+   <div className="mt-3">
+    <img src={props.movie.images.md} alt={props.movie.name}/>
+    <h3>{props.movie.name}</h3>
+
    </div>
   )
- }
 }
 
 export default GalleryList
